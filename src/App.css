@@ -6,6 +6,12 @@
   height: 40vmin;
   pointer-events: none;
 }
+.makeup_section{
+  background-image: url('./assets/bg1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
