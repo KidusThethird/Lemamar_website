@@ -14,7 +14,7 @@ export const Navbar = () => {
 
 
 {/* Menu holder */}
-  <div className="flex fixed  w-full  z-50  items-center justify-around bg-gradient-to-r from-fuchsia-700 via-red-400  to-pink-500">
+  <div className="flex fixed   w-full  z-50  items-center justify-around bg-gradient-to-r from-fuchsia-700 via-red-400  to-pink-500">
    
     <ul className="flex  text-white uppercase justify-around items-center gap-9 ">
     <li>
@@ -22,25 +22,25 @@ export const Navbar = () => {
     <House size={32} />
     </Link>
       </li>
+      <li className='hover:bg-white py-4 px-2 hover:text-fuchsia-700 transition-all ease-in-out duration-150'>
+        
+        <a href=''className='hover:bg-white py-4 px-2 hover:text-fuchsia-700 transition-all ease-in-out duration-150'>New Arrivals</a>
+      </li>
+      <li>
+        <a  href=''className='hover:bg-white py-4 px-2 hover:text-fuchsia-700 transition-all ease-in-out duration-150'>Makeup</a>
+      </li>
+      <li>
+        <a  href=''className='hover:bg-white py-4 px-2 hover:text-fuchsia-700 transition-all ease-in-out duration-150'>Skincare</a>
+      </li>
       <li>
         
-        <a href=''>New Arrivals</a>
+        <a  href=''className='hover:bg-white py-4 px-2 hover:text-fuchsia-700 transition-all ease-in-out duration-150'>Hair</a>
       </li>
       <li>
-        <a  href=''>Makeup</a>
+        <a  href=''className='hover:bg-white py-4 px-2 hover:text-fuchsia-700 transition-all ease-in-out duration-150'>Bath&Body</a>
       </li>
       <li>
-        <a  href=''>Skincare</a>
-      </li>
-      <li>
-        
-        <a  href=''>Hair</a>
-      </li>
-      <li>
-        <a  href=''>Bath&Body</a>
-      </li>
-      <li>
-        <a  href=''>Accessories</a>
+        <a  href=''className='hover:bg-white py-4 px-2 hover:text-fuchsia-700 transition-all ease-in-out duration-150'>Accessories</a>
       </li>
     </ul>
 
@@ -61,7 +61,7 @@ export const Navbar = () => {
 </div>
 
 <Link to="/cart">
-        <ShoppingCart size={32} className='text-white font-bold'/>
+        <ShoppingCart size={32} className='text-white font-bold hover:text-purple-800 '/>
  </Link>
 
   </div>
