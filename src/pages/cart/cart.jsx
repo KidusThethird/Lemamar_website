@@ -4,10 +4,10 @@ import { ShopContext } from '../../context/shop-context';
 
 export const Cart = () => {
 
-  const { cartItems, addToCart, removeFromCart } = useContext(ShopContext);
+  const { cartItems, addToCart, removeFromCart ,totalCartItems} = useContext(ShopContext);
   
 
-  return (
+  return (<>
     <div className='flex '>
 
     <table className='justify-center mx-auto shadow-2xl border-2 gap-x-32 w-full px-40'>
@@ -42,7 +42,11 @@ return <tr>
          <th className='py-3 '>Total</th>
        </tr>
 }
-      })}
+
+      })
+       // if(totalCartItems == 0 ){}
+  }
+
 
         
       </tbody>
@@ -50,5 +54,12 @@ return <tr>
     </table>
 
     </div>
+    {
+
+totalCartItems == 0 ?  <div className='w-full flex  '>
+ <p className='justify-center py-24 text-4xl  mx-auto text-purple-700'>Cart is Empty!</p>
+</div> :  <div></div>
+ }
+</>    
   )
 }
