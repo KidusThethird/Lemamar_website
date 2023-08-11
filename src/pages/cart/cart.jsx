@@ -4,7 +4,7 @@ import { ShopContext } from '../../context/shop-context';
 
 export const Cart = () => {
 
-  const { cartItems } = useContext(ShopContext);
+  const { cartItems, addToCart, removeFromCart } = useContext(ShopContext);
   
 
   return (
@@ -29,10 +29,16 @@ export const Cart = () => {
 if(cartItems[product.id] !== 0){
 return <tr>
        
-       <th><img className='w-36 mx-auto' src={product.productImage} alt="" /></th>
+       <th><img className='w-36 mx-auto border border-dashed border-purple-600 border-1' src={product.productImage} alt="" /></th>
          <th className='py-3 '>{product.productName}</th>
          <th className='py-3 '>{product.price}</th>
-         <th className='py-3 '>Amount</th>
+         <th className='py-3 '>  
+         <div className='space-x-6  justify-center flex'>
+            <button className='text-2xl cursor-pointer' href="" onClick={()=>removeFromCart(product.id)}>-</button>
+            <input value={cartItems[product.id]} className='w-16 h-8 border-purple-900 text-xl text-center border-2' type="text" />
+            <button className='text-2xl   cursor-pointer' href="" onClick={()=>addToCart(product.id)}>+</button> 
+          </div>
+           </th>
          <th className='py-3 '>Total</th>
        </tr>
 }
