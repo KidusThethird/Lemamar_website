@@ -4,7 +4,7 @@ import { ShopContext } from '../../context/shop-context';
 
 export const Cart = () => {
 
-  const { cartItems, addToCart, removeFromCart ,totalCartItems} = useContext(ShopContext);
+  const { cartItems, addToCart, removeFromCart ,totalCartItems , updateCartItemCount} = useContext(ShopContext);
   
 
   return (<>
@@ -35,7 +35,7 @@ return <tr>
          <th className='py-3 '>  
          <div className='space-x-6  justify-center flex'>
             <button className='text-2xl cursor-pointer' href="" onClick={()=>removeFromCart(product.id)}>-</button>
-            <input value={cartItems[product.id]} className='w-16 h-8 border-purple-900 text-xl text-center border-2' type="text" />
+            <input value={cartItems[product.id]} onChange={(e)=> updateCartItemCount(Number(e.target.value), product.id) } className='w-16 h-8 border-purple-900 text-xl text-center border-2' type="text" />
             <button className='text-2xl   cursor-pointer' href="" onClick={()=>addToCart(product.id)}>+</button> 
           </div>
            </th>
