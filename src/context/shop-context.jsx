@@ -2,7 +2,6 @@ import React, { createContext, useState } from 'react'
 import { PRODUCTS } from '../products';
 
 export const ShopContext = createContext(null);
-
 const getDefaultCart = () => {
     let cart ={};
      for(let i=1; i<PRODUCTS.length + 1; i++){
@@ -14,6 +13,8 @@ const getDefaultCart = () => {
 export const ShopContextProvider = (props) => {
 
     const [cartItems, setCartItems] = useState(getDefaultCart());
+    let [totalCartItems, setTotalCartItems] = useState(0);
+ 
 
     const addToCart = (itemId) =>{
         setCartItems((prev) => ({...prev, [itemId]: prev[itemId] + 1 }))
@@ -22,8 +23,20 @@ export const ShopContextProvider = (props) => {
         setCartItems((prev) => ({...prev, [itemId]: prev[itemId] - 1 }))
     }
 
-    const contextValue = { cartItems, addToCart, removeFromCart}
-    //console.log(cartItems);
+    const contextValue = { cartItems, addToCart, removeFromCart, totalCartItems}
+
+   
+
+   React.useEffect(()=>{
+    let total = 0;
+    for (let i = 1; i <= PRODUCTS.length; i++) {
+      total += cartItems[i];
+    }
+    setTotalCartItems(total);
+    console.log(total);
+   },[cartItems])
+   
+   
         return (
     <ShopContext.Provider value={contextValue}>
         {props.children}

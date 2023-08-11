@@ -3,8 +3,15 @@ import logo from '../assets/logo (2).png';
 import {ShoppingCart} from 'phosphor-react';
 import {House} from 'phosphor-react';
 import {Link} from 'react-router-dom';
+import {ShopContext} from '../context/shop-context'
+import { useContext } from 'react';
 
 export const Navbar = () => {
+
+  const {cartItems, totalCartItems} = useContext (ShopContext);
+
+  
+  
   return (
     <div className=''>
 
@@ -61,10 +68,17 @@ export const Navbar = () => {
 </div>
 
 {/* shopping cart icon*/ }
-<div className='text-purple-800 rounded-full font-bold hover:bg-purple-800 hover:text-white p-2 duration-500 cursor-pointer bg-white'>
+
+
+{console.log('test: ' + totalCartItems)}
+<div className='relative  text-purple-800 rounded-full font-bold hover:bg-purple-800 hover:text-white p-2 duration-500 cursor-pointer bg-white'>
 <Link to="/cart">
         <ShoppingCart size={32}  />
  </Link>
+ {totalCartItems>0 ?  <div className='bg-red-700 text-white rounded-full w-fit p-1 text-xs absolute top-0 right-0'  >
+ {totalCartItems}
+ </div> :  <div > </div>}
+
  </div>
   </div>
       {/* Logo holder*/}
