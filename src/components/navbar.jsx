@@ -22,25 +22,25 @@ export const Navbar = () => {
     <House size={32} />
     </Link>
       </li>
-      <li className='hover:bg-white py-4 px-2 hover:text-fuchsia-700 transition-all ease-in-out duration-150'>
+      <li >
         
-        <a href=''className='hover:bg-white py-4 px-2 hover:text-fuchsia-700 transition-all ease-in-out duration-150'>New Arrivals</a>
+        <a href=''className='nav-bar-items-style'>New Arrivals</a>
       </li>
       <li>
-        <a  href=''className='hover:bg-white py-4 px-2 hover:text-fuchsia-700 transition-all ease-in-out duration-150'>Makeup</a>
+        <a  href=''className='nav-bar-items-style'>Makeup</a>
       </li>
       <li>
-        <a  href=''className='hover:bg-white py-4 px-2 hover:text-fuchsia-700 transition-all ease-in-out duration-150'>Skincare</a>
+        <a  href=''className='nav-bar-items-style'>Skincare</a>
       </li>
       <li>
         
-        <a  href=''className='hover:bg-white py-4 px-2 hover:text-fuchsia-700 transition-all ease-in-out duration-150'>Hair</a>
+        <a  href=''className='nav-bar-items-style'>Hair</a>
       </li>
       <li>
-        <a  href=''className='hover:bg-white py-4 px-2 hover:text-fuchsia-700 transition-all ease-in-out duration-150'>Bath&Body</a>
+        <a  href=''className='nav-bar-items-style'>Bath&Body</a>
       </li>
       <li>
-        <a  href=''className='hover:bg-white py-4 px-2 hover:text-fuchsia-700 transition-all ease-in-out duration-150'>Accessories</a>
+        <a  href=''className='nav-bar-items-style'>Accessories</a>
       </li>
     </ul>
 
@@ -60,10 +60,12 @@ export const Navbar = () => {
   </form>
 </div>
 
+{/* shopping cart icon*/ }
+<div className='text-purple-800 rounded-full font-bold hover:bg-purple-800 hover:text-white p-2 duration-500 cursor-pointer bg-white'>
 <Link to="/cart">
-        <ShoppingCart size={32} className='text-white font-bold hover:text-purple-800 '/>
+        <ShoppingCart size={32}  />
  </Link>
-
+ </div>
   </div>
       {/* Logo holder*/}
 <div className='items-center pt-16'> 
