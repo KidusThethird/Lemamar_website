@@ -1,10 +1,11 @@
 import React, { useContext } from 'react'
 import { PRODUCTS } from '../../products';
 import { ShopContext } from '../../context/shop-context';
+import {Link} from 'react-router-dom';
 
 export const Cart = () => {
 
-  const { cartItems, addToCart, removeFromCart ,totalCartItems , updateCartItemCount} = useContext(ShopContext);
+  const { cartItems, addToCart, removeFromCart ,totalCartItems , updateCartItemCount,TotalAmount} = useContext(ShopContext);
   
 
   return (<>
@@ -39,7 +40,7 @@ return <tr>
             <button className='text-2xl   cursor-pointer' href="" onClick={()=>addToCart(product.id)}>+</button> 
           </div>
            </th>
-         <th className='py-3 '>Total</th>
+         <th className='py-3 '>{product.price * cartItems[product.id]} Birr</th>
        </tr>
 }
 
@@ -54,12 +55,26 @@ return <tr>
     </table>
 
     </div>
+    <div className='flex  justify-end bg-white'>
+  <h1 className=' border-t-2 w-52 text-center text-3x text-purple-800 border-purple-800'>{TotalAmount} Birr</h1>
+</div>
+
+<div className='py-5 w-full flex flex-row justify-center gap-x-10'>
+  <p className='text-white  w-fit px-24 py-4 bg-purple-700 cursor-pointer'>Proceed To Checkout</p>
+  <Link to="/"  className='text-white w-fit px-24 py-4 bg-slate-800 '>
+  <a href=''>Continue Shopping</a>
+    </Link>
+  
+</div>
+
     {
 
 totalCartItems == 0 ?  <div className='w-full flex  '>
  <p className='justify-center py-24 text-4xl  mx-auto text-purple-700'>Cart is Empty!</p>
 </div> :  <div></div>
  }
+
+
 </>    
   )
 }

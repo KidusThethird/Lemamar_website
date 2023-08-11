@@ -10,7 +10,7 @@ export const Product = (props) => {
     const cartItemsAmount = cartItems[id];
   return (
     
-
+<>
     <div className='hover:scale-110 group transition-all ease-in-out duration-200'>
          <div className='bg-fuchsia-800 w-fit px-5 text-white rounded-t-full'>{price} Birr</div>
     <img src={productImage} alt="" className='border border-solid border-purple-600' />
@@ -21,6 +21,8 @@ export const Product = (props) => {
     </div>
 </div>
 
+
+</>
 
   )
 }
