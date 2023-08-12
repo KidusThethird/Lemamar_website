@@ -10,6 +10,8 @@ import p09 from './assets/products/09.jpeg';
 import p10 from './assets/products/10.jpeg';
 import p11 from './assets/products/11.jpeg';
 import p12 from './assets/products/12.jpeg';
+import p13 from './assets/products/13.jpeg';
+import p14 from './assets/products/14.webp';
 
 
 
@@ -19,7 +21,7 @@ import p12 from './assets/products/12.jpeg';
 // Export all the imported images as an object
 export default {
     p01, p02, p03 , p04 , p05 , p06 ,p07, p08, p09 , p10,
-    p11 , p12
+    p11 , p12, p13, p14
 
   
   // Additional image exports...

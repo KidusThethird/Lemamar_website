@@ -55,17 +55,20 @@ return <tr>
     </table>
 
     </div>
-    <div className='flex  justify-end bg-white'>
+    
+{totalCartItems != 0 ? 
+<>
+<div className='flex  justify-end bg-white'>
   <h1 className=' border-t-2 w-52 text-center text-3x text-purple-800 border-purple-800'>{TotalAmount} Birr</h1>
 </div>
-
 <div className='py-5 w-full flex flex-row justify-center gap-x-10'>
   <p className='text-white  w-fit px-24 py-4 bg-purple-700 cursor-pointer'>Proceed To Checkout</p>
   <Link to="/"  className='text-white w-fit px-24 py-4 bg-slate-800 '>
   <a href=''>Continue Shopping</a>
     </Link>
   
-</div>
+</div></> : <div></div>
+}
 
     {
 
