@@ -34,7 +34,7 @@ useEffect(() => {
       setCover(coverHolder[0]);
      
     }
-  }, 5000);
+  }, 7000);
 
  
   return () => {
@@ -53,7 +53,7 @@ useEffect(() => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.5 }} >
+            transition={{ duration: 1 }} >
   <img className='shadow-2xl' src={cover} alt="" />
 </motion.div>
 
