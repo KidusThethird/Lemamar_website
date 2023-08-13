@@ -37,6 +37,7 @@ function App() {
           <Route path="/cart"  element={<Cart />}/>
       </Routes>
       <GridItemsAd />
+      <Footer />
     </Router>
     </ShopContextProvider>
 
