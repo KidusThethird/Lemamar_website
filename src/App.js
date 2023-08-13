@@ -12,6 +12,7 @@ import {Cart} from './pages/cart/cart';
 import { Shop} from './pages/shop/shop';
 import { ShopContextProvider } from './context/shop-context';
 import {GridItemsAd} from './components/grid-items-ad';
+import {Footer} from './components/footer';
 
 
 
