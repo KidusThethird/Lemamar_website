@@ -1,9 +1,11 @@
 import React from 'react'
+import {FacebookLogo, YoutubeLogo , InstagramLogo } from 'phosphor-react';
+
 
 export const Footer = () => {
   return (
-    <div>
-        <div className='w-full justify-between flex bg-purple-800 text-white px-10 py-7'>
+    <div className=' bg-purple-800'>
+        <div className='w-full justify-between flex text-white px-10 py-7'>
 
             <div className='cursor-pointer'>
                 <h1 className='font-bold pb-4'>
@@ -47,13 +49,25 @@ export const Footer = () => {
 
                 <p className='pb-4'>Subscribe for Newsletter</p>
                 <div className='border-2 border-white py-1 pl-4 pr-1 rounded-full'>
-                    <input className='bg-purple-800' placeholder='Your email address' type="text" />
+                    <input className='bg-purple-800 '  placeholder='Your email address' type="text" />
                     <button className='bg-white text-sm text-purple-800 p-2 rounded-full'>SIGN UP</button>
                 </div>
             </div>
 
         </div>
-        <div></div>
+        <div className='flex justify-center space-x-8 pb-10'>
+                 <div className='bg--purple-800 cursor-pointer font-bold w-fit text-white rounded-full
+                        hover:bg-white hover:text-purple-800
+                 '><FacebookLogo size={48}/></div>
+                 <div className='bg--purple-800 cursor-pointer font-bold w-fit text-white rounded-full
+                        hover:bg-white hover:text-purple-800'><InstagramLogo size={48}/></div>
+                 <div className='bg--purple-800 cursor-pointer font-bold w-fit text-white rounded-full
+                        hover:bg-white hover:text-purple-800'><YoutubeLogo size={48}/></div>
+            </div>
+        <div className='flex w-full justify-center pb-8'>
+                
+            <h1 className='text-white'>Copyright &copy; 2023 Lemamar Beauty Bar</h1>
+        </div>
 
 
 
