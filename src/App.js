@@ -1,6 +1,7 @@
 
 import './App.css';
 import styles from "./index.css"
+import { Helmet } from 'react-helmet'
 
 
 
@@ -18,7 +19,13 @@ import {GridItemsAd} from './components/grid-items-ad';
 
 function App() {
   return (
-    <div >
+    
+      <div>
+      
+      <Helmet>
+        <title>Lemamar</title>
+      </Helmet>
+
     <ShopContextProvider>
     <Router>
           <Navbar />
