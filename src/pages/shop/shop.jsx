@@ -56,7 +56,7 @@ export const Shop = () => {
           <div className=' space-x-3 md:space-x-7 mx-auto py-9'>
             <button
               onClick={() => all()}
-              className={`${all_button} hover:scale-110 hover:shadow-2xl text-white px-4 rounded`}
+              className={`${all_button} hover:scale-110 hover:shadow-2xl text-white px-1 md:px-4 rounded`}
             >
               All
             </button>
@@ -83,7 +83,7 @@ export const Shop = () => {
       </div>
 
 
-      <div className='grid grid-cols-5 p-6 gap-x-8 gap-y-4'>
+      <div className='grid grid-cols-3 lg:grid-cols-5 p-6 gap-x-8 gap-y-4'>
     <AnimatePresence>
       {PRODUCTS.map((product) =>
         product.category === chosenCategory || chosenCategory === 'all' ? (
