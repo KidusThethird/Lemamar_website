@@ -21,25 +21,25 @@ export const GridItemsAd = () => {
           <div className='group relative  flex justify-center'>
             <img className='one_of_four_images ' src={products.p14} alt="" />
               <div className='animated-cover'>
-                <h1 className=' text-white text-3xl font-bold uppercase text-center my-auto mx-auto'>Skin Care</h1>
+                <h1 className=' text-white text-2xl xl:text-3xl font-bold uppercase text-center my-auto mx-auto'>Skin Care</h1>
               </div>
           </div>
           <div className='group relative  flex justify-center'>
             <img className='one_of_four_images ' src={products.p13} alt="" />
               <div className='animated-cover'>
-                <h1 className=' text-white text-3xl font-bold uppercase text-center my-auto mx-auto'>Body</h1>
+                <h1 className=' text-white text-2xl xl:text-3xl font-bold uppercase text-center my-auto mx-auto'>Body</h1>
               </div>
           </div>
           <div className='group relative  flex justify-center'>
             <img className='one_of_four_images ' src={products.p03} alt="" />
               <div className='animated-cover'>
-                <h1 className=' text-white text-3xl font-bold uppercase text-center my-auto mx-auto'>Attractive</h1>
+                <h1 className=' text-white text-2xl xl:text-3xl font-bold uppercase text-center my-auto mx-auto'>Attractive</h1>
               </div>
           </div>
           <div className='group relative  flex justify-center'>
             <img className='one_of_four_images ' src={products.p04} alt="" />
               <div className='animated-cover'>
-                <h1 className=' text-white text-3xl font-bold uppercase text-center my-auto mx-auto'>Bath</h1>
+                <h1 className=' text-white text-2xl xl:text-3xl font-bold uppercase text-center my-auto mx-auto'>Bath</h1>
               </div>
           </div>
           

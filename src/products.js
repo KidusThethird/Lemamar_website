@@ -11,7 +11,7 @@ export const PRODUCTS = [
     },
     {
         id:2,
-        productName: 'Makeup Sponge Holder',
+        productName: 'Makeup Sponge ',
         price: 50,
         productImage: productImage.p02,
         category: 'tools'
@@ -95,7 +95,7 @@ export const PRODUCTS = [
     },
     {
         id: 14,
-        productName: "Nourishing Eye Cream",
+        productName: "Eye Cream",
         price: 19,
         productImage: productImage.p14,
         category: "body"
@@ -123,14 +123,14 @@ export const PRODUCTS = [
     },
     {
         id: 18,
-        productName: "Brightening Face Mask",
+        productName: "Face Mask",
         price: 22,
         productImage: productImage.p18,
         category: "body"
     },
     {
         id: 19,
-        productName: "Moisturizing Lip Balm",
+        productName: "Lip Balm",
         price: 4,
         productImage: productImage.p19,
         category: "body"
@@ -165,7 +165,7 @@ export const PRODUCTS = [
     },
     {
         id: 24,
-        productName: "Moisturizing Hand Cream",
+        productName: "Hand Cream",
         price: 7,
         productImage: productImage.p24,
         category: "body"
@@ -186,7 +186,7 @@ export const PRODUCTS = [
     },
     {
         id: 27,
-        productName: "Brightening Eye Cream",
+        productName: "Eye Cream",
         price: 21,
         productImage: productImage.p27,
         category: "body"
@@ -200,7 +200,7 @@ export const PRODUCTS = [
     },
     {
         id: 29,
-        productName: "Moisturizing Night Cream",
+        productName: "Night Cream",
         price: 29,
         productImage: productImage.p29,
         category: "body"

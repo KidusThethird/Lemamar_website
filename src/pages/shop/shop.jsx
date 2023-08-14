@@ -51,9 +51,9 @@ export const Shop = () => {
 
       <div className='flex justify-center'>
         <div>
-          <h1 className='p-5 text-4xl text-center'>Shop</h1>
+          <h1 className='hidden md:block p-5 text-4xl text-center'>Shop</h1>
 
-          <div className='space-x-7 mx-auto py-9'>
+          <div className=' space-x-3 md:space-x-7 mx-auto py-9'>
             <button
               onClick={() => all()}
               className={`${all_button} hover:scale-110 hover:shadow-2xl text-white px-4 rounded`}
