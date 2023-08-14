@@ -83,7 +83,7 @@ export const Shop = () => {
       </div>
 
 
-      <div className='grid grid-cols-3 lg:grid-cols-5 p-6 gap-x-8 gap-y-4'>
+      <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 p-6 gap-x-8 gap-y-4'>
     <AnimatePresence>
       {PRODUCTS.map((product) =>
         product.category === chosenCategory || chosenCategory === 'all' ? (
