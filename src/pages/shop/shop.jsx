@@ -49,11 +49,11 @@ export const Shop = () => {
     <div className=''>
       <Cover />
 
-      <div className='flex justify-center'>
+      <div className='flex justify-center  sticky top-8 z-20 shadow-xl bg-gray-100'>
         <div>
-          <h1 className='hidden md:block p-5 text-4xl text-center'>Shop</h1>
+         
 
-          <div className=' space-x-3 md:space-x-7 mx-auto py-9'>
+          <div className=' space-x-3 md:space-x-7 mid:mx-auto py-9'>
             <button
               onClick={() => all()}
               className={`${all_button} hover:scale-110 hover:shadow-2xl text-white px-1 md:px-4 rounded`}
@@ -64,13 +64,13 @@ export const Shop = () => {
               onClick={() => skin()}
               className={`${skin_button} hover:scale-110 hover:shadow-2xl text-white px-4 rounded`}
             >
-              Skin Products
+              Skin
             </button>
             <button
               onClick={() => body()}
               className={`${body_button} hover:scale-110 hover:shadow-2xl text-white px-4 rounded`}
             >
-              Body Products
+              Body
             </button>
             <button
               onClick={() => tool()}
