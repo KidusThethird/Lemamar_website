@@ -1,17 +1,26 @@
 import React from 'react'
 import logo from '../assets/logo (2).png';
-import {ShoppingCart} from 'phosphor-react';
-import {House , List} from 'phosphor-react';
+import {ShoppingCart, House , List} from 'phosphor-react';
+
 import {Link} from 'react-router-dom';
 import {ShopContext} from '../context/shop-context'
 import { useContext } from 'react';
+import {NavDrawer} from './nav-drawer';
+import { useState } from 'react';
 
-export const Navbar = () => {
+export const Navbar = (props) => {
+
+ 
 
   const {cartItems, totalCartItems} = useContext (ShopContext);
 
+  const [navBarDrawerStatus , setNavbarDrawerStatus] = useState(false);
   
-  
+
+function navBarDraw (){
+  setNavbarDrawerStatus(true);
+}
+
   return (
     <div className=''>
 
@@ -21,11 +30,11 @@ export const Navbar = () => {
 
 
 {/* Menu holder */}
-  <div className="flex fixed pr-8 lg:pr-0  w-full  z-50   items-center justify-between lg:justify-around bg-gradient-to-r from-fuchsia-700 via-red-400  to-pink-500">
+  <div className="flex fixed pr-8 lg:pr-0  w-full  z-30   items-center justify-between lg:justify-around bg-gradient-to-r from-fuchsia-700 via-red-400  to-pink-500">
    
 
 <ul className='block lg:hidden text-white px-8'>
-<li>
+<li onClick={()=>navBarDraw()}>
     <Link to="/">
     <List size={32} />
     </Link>
@@ -76,7 +85,20 @@ export const Navbar = () => {
  </div> :  <div > </div>}
 
  </div>
+
+
+
   </div>
+
+
+
+{navBarDrawerStatus &&
+  <div className='block lg:hidden z-50 pt-0  fixed w-full'>
+  <NavDrawer  setNavbarDrawerStatus={setNavbarDrawerStatus}/>
+</div>
+}
+
+
       {/* Logo holder*/}
 <div className='hidden md:block items-center pt-16'> 
 <img src={logo}  alt="Logo" className=" h-24 mx-auto" />

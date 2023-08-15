@@ -21,7 +21,7 @@ export const GridItemsAd = () => {
           <div className='group relative  flex justify-center'>
             <img className='one_of_four_images ' src={products.p14} alt="" />
               <div className='animated-cover'>
-                <h1 className=' text-white text-lg md:text-2xl xl:text-3xl font-bold uppercase text-center my-auto mx-auto'>Skin Care</h1>
+                <h1 className=' text-white text-lg  md:text-2xl xl:text-3xl font-bold uppercase text-center my-auto mx-auto'>Skin Care</h1>
               </div>
           </div>
           <div className='group relative  flex justify-center'>
