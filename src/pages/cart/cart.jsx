@@ -63,7 +63,7 @@ return <tr>
 </div>
 <div className='py-5 w-full flex flex-row justify-center gap-x-4 md:gap-x-10'>
   <p className='text-white  w-fit px-5 lg:px-24 py-4 bg-purple-700 cursor-pointer'>Proceed To Checkout</p>
-  <Link to="/"  className='text-white w-fit px-5 lg:px-24 py-4 bg-slate-800 '>
+  <Link to="/"  className='text-white w-fit px-2 md:px-5 lg:px-24 py-4 bg-slate-800 '>
   <a href=''>Continue Shopping</a>
     </Link>
   

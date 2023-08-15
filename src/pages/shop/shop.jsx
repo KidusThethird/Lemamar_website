@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import products from '../../productImage';
-import { Cover } from '../../components/cover';
+
 import { PRODUCTS } from '../../products';
 import { Product } from './product';
 import {motion ,AnimatePresence  } from 'framer-motion';
+import {Cover} from '../../components/cover'
 
 export const Shop = () => {
   const [chosenCategory, setChosenCategory] = useState('all');
@@ -47,8 +48,8 @@ export const Shop = () => {
 
   return (
     <div className=''>
-      <Cover />
-
+   
+   <Cover />
       <div className='flex justify-center  sticky top-8 z-20 shadow-xl bg-gray-100'>
         <div>
          

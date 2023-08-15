@@ -8,6 +8,8 @@ import { useContext } from 'react';
 import {NavDrawer} from './nav-drawer';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import {Cover} from './cover'
+
 
 export const Navbar = (props) => {
 
@@ -69,16 +71,17 @@ const sidebarVariants = {
     <House size={32} />
     </Link>
       </li>
+      
+      <li>
+        <a  href='/about'className='nav-bar-items-style'>About Us</a>
+      </li>
       <li >
-        
         <a href=''className='nav-bar-items-style'>New Arrivals</a>
       </li>
       <li>
         <a  href=''className='nav-bar-items-style'>Makeup</a>
       </li>
-      <li>
-        <a  href=''className='nav-bar-items-style'>Skincare</a>
-      </li>
+      
       <li>
         
         <a  href=''className='nav-bar-items-style'>Hair</a>
@@ -138,6 +141,8 @@ const sidebarVariants = {
 
  
   {/* Header End */}
+
+
 
     </div>
   )

@@ -18,7 +18,7 @@ export const NavDrawer = (props) => {
 
   
   return (
-    <div className='flex flex-col shadow-2xl text-white w-4/6 md:w-1/2 gap-y-4 py-4 pl-5 bg-purple-800 rounded-br-3xl'>
+    <div className='flex flex-col shadow-2xl text-white w-4/6 md:w-1/2 gap-y-4 pt-4 pb-8 pl-5 bg-purple-800 rounded-br-3xl'>
     
         <div className=' w-full flex '>
           <div onClick={()=>closeNavbar()} className='justify-end ml-auto pr-5 cursor-pointer'>
@@ -42,16 +42,19 @@ export const NavDrawer = (props) => {
             </Link>
             
         </div>
+        <a href="/about" onClick={()=>closeNavbar()}className='cursor-pointer'>About Us</a>
         <a href="" onClick={()=>closeNavbar() } className='cursor-pointer hover:text-white '>New Arrivals</a>
         <a href=""onClick={()=>closeNavbar()} className='cursor-pointer'>Makeups</a>
-        <a href="" onClick={()=>closeNavbar()}className='cursor-pointer'>Skin Care</a>
+        
         <a href="" onClick={()=>closeNavbar()}className='cursor-pointer'>Hair</a>
         <a href=""onClick={()=>closeNavbar()} className='cursor-pointer'>Bath Body</a>
         <a href=""onClick={()=>closeNavbar()} className='cursor-pointer'>Accessories</a>
-        <a href=""onClick={()=>closeNavbar()} className='cursor-pointer mt-5 pt-2 w-1/4 border-t-2 border-dotted'>Cart
+        <Link to={"/cart"}>
+        <a href=""onClick={()=>closeNavbar()} className='cursor-pointer mt-5 pt-2 w-1/4 text-yellow-400 border-t-2 border-dotted'>Cart
         {
           totalCartItems>0 ?  " (" + totalCartItems + ")" : ''
         } </a>
+        </Link>
     </div>
   )
 }
