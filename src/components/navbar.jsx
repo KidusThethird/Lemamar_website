@@ -13,7 +13,7 @@ export const Navbar = (props) => {
 
  
 
-  const {cartItems, totalCartItems} = useContext (ShopContext);
+  const { totalCartItems} = useContext (ShopContext);
 
   const [navBarDrawerStatus , setNavbarDrawerStatus] = useState(false);
   

@@ -1,11 +1,16 @@
 import React from 'react'
 import {X , House} from 'phosphor-react';
 import {Link} from 'react-router-dom';
-import Logo from '../assets/logo__2.png'
+import {ShopContext} from '../context/shop-context';
+import { useContext } from 'react';
+//import Logo from '../assets/logo__2.png';
+
 
 
 export const NavDrawer = (props) => {
   const { setNavbarDrawerStatus} = props;
+
+  const { totalCartItems} = useContext (ShopContext);
 
   function closeNavbar () {
     setNavbarDrawerStatus(false);
@@ -13,7 +18,7 @@ export const NavDrawer = (props) => {
 
   
   return (
-    <div className='flex flex-col shadow-2xl text-white w-4/6 gap-y-4 py-4 pl-5 bg-purple-800 rounded-br-3xl'>
+    <div className='flex flex-col shadow-2xl text-white w-4/6 md:w-1/2 gap-y-4 py-4 pl-5 bg-purple-800 rounded-br-3xl'>
     
         <div className=' w-full flex '>
           <div onClick={()=>closeNavbar()} className='justify-end ml-auto pr-5 '>
@@ -43,6 +48,10 @@ export const NavDrawer = (props) => {
         <a href="" onClick={()=>closeNavbar()}className='cursor-pointer'>Hair</a>
         <a href=""onClick={()=>closeNavbar()} className='cursor-pointer'>Bath Body</a>
         <a href=""onClick={()=>closeNavbar()} className='cursor-pointer'>Accessories</a>
+        <a href=""onClick={()=>closeNavbar()} className='cursor-pointer mt-5 pt-2 w-1/4 border-t-2 border-dotted'>Cart
+        {
+          totalCartItems>0 ?  " (" + totalCartItems + ")" : ''
+        } </a>
     </div>
   )
 }
