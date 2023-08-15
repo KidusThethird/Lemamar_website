@@ -48,10 +48,10 @@ const sidebarVariants = {
 
 
 {/* Menu holder */}
-  <div className="flex fixed pr-8 lg:pr-0  w-full  z-30   items-center justify-between lg:justify-around bg-gradient-to-r from-fuchsia-700 via-red-400  to-pink-500">
+  <div className="flex fixed pr-8 lg:pr-0  w-full  z-30   items-center justify-around lg:justify-around bg-gradient-to-r from-fuchsia-700 via-red-400  to-pink-500">
    
 
-<ul className='block lg:hidden text-white px-8'>
+<ul className='block lg:hidden text-white '>
 <li className='cursor-pointer' onClick={()=>navBarDraw()}>
     
     <List size={32} />
@@ -62,7 +62,7 @@ const sidebarVariants = {
 
 
    <div className='block lg:hidden'>
-    <h1 className='text-white   text-2xl'>LEMAMAR</h1>
+    <h1 className='text-white   text-xl'>LEMAMAR</h1>
    </div>
 
     <ul className="hidden lg:flex  text-white uppercase justify-around items-center gap-9 ">
@@ -133,7 +133,7 @@ const sidebarVariants = {
       {/* very top contact bar */}
       <div className= ' pt-14 bg-purple-900 text-xs text-white space-x-4 flex p-3'>
         <p>Get Help</p>
-          <p> Call 0719604053</p>
+          <p> Call 0900112233</p>
           <p> Messenger</p>
           <p> Whatsapp</p>
     </div>
