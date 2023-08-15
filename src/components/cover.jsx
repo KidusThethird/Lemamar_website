@@ -13,7 +13,7 @@ export function Cover() {
 
 const WelcomeTxt1 = "Welcome to Lemamar Cosmetics, your ultimate destination for all things beauty and skincare. We are a premier cosmetics shop dedicated to providing high-quality products that enhance your natural beauty and empower your self-expression.";
 const WelcomeTxt2 = "Indulge in the exquisite world of beauty at Lemamar Beauty Bar, where we believe that beauty is a form of art and self-care. Step into our luxurious sanctuary and let us guide you on a transformative journey to enhance your natural radiance.";
-const WelcomeTxt3 = "Discover a carefully selected range of exclusive beauty brands and products that embody our commitment to quality and excellence. We emphasize cruelty-free and ethically sourced ingredients, ensuring that every item in our selection meets the highest standards.";
+const WelcomeTxt3 = "Discover a carefully selected range of beauty brands that embody our commitment to quality and excellence. We emphasize cruelty-free and ethically sourced ingredients, ensuring that every item in our selection meets the highest standards.";
 
 
 const [cover, setCover] = useState(CoverImage1);
