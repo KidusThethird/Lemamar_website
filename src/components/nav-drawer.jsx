@@ -1,5 +1,8 @@
 import React from 'react'
-import {X} from 'phosphor-react';
+import {X , House} from 'phosphor-react';
+import {Link} from 'react-router-dom';
+import Logo from '../assets/logo__2.png'
+
 
 export const NavDrawer = (props) => {
   const { setNavbarDrawerStatus} = props;
@@ -18,17 +21,28 @@ export const NavDrawer = (props) => {
             </div>
         </div>
 
-        <div className='justify-center'>Logo</div>
-        <div className=''>
-            <img src="" alt="" />
-            HOME
+        <div onClick={()=>closeNavbar()} className='justify- w-full'></div>
+        <div onClick={()=>closeNavbar()} className='flex flex-col '>
+            <img className='' src={''} alt="" />
+            <div className='mb-10 shadow-2xl'>
+            <h1 className='text-4xl font-bold font-mono '>LEMAMAR</h1>
+            <h1 className='pl-12 italic'>Beauty Bar</h1>
+            </div>
+            <Link to="/">
+            <div className='flex gap-2 items-center' >      
+              <House size={20} />
+             Home
+             </div>
+
+            </Link>
+            
         </div>
-        <a href="">New Arrivals</a>
-        <a href="">Makeups</a>
-        <a href="">Skin Care</a>
-        <a href="">Hair</a>
-        <a href="">Bath Body</a>
-        <a href="">Accessories</a>
+        <a href="" onClick={()=>closeNavbar() } className='cursor-pointer hover:text-white '>New Arrivals</a>
+        <a href=""onClick={()=>closeNavbar()} className='cursor-pointer'>Makeups</a>
+        <a href="" onClick={()=>closeNavbar()}className='cursor-pointer'>Skin Care</a>
+        <a href="" onClick={()=>closeNavbar()}className='cursor-pointer'>Hair</a>
+        <a href=""onClick={()=>closeNavbar()} className='cursor-pointer'>Bath Body</a>
+        <a href=""onClick={()=>closeNavbar()} className='cursor-pointer'>Accessories</a>
     </div>
   )
 }

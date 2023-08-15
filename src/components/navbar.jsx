@@ -7,6 +7,7 @@ import {ShopContext} from '../context/shop-context'
 import { useContext } from 'react';
 import {NavDrawer} from './nav-drawer';
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 
 export const Navbar = (props) => {
 
@@ -17,9 +18,24 @@ export const Navbar = (props) => {
   const [navBarDrawerStatus , setNavbarDrawerStatus] = useState(false);
   
 
-function navBarDraw (){
+const navBarDraw =() => {
   setNavbarDrawerStatus(true);
 }
+
+
+const sidebarVariants = {
+  hidden: {
+    x: '-100%',
+  },
+  visible: {
+    x: 0,
+    transition: {
+      duration: 0.3, // Animation duration in seconds
+      ease: 'easeOut', // Easing function
+    },
+  },
+};
+
 
   return (
     <div className=''>
@@ -34,13 +50,18 @@ function navBarDraw (){
    
 
 <ul className='block lg:hidden text-white px-8'>
-<li onClick={()=>navBarDraw()}>
-    <Link to="/">
+<li className='cursor-pointer' onClick={()=>navBarDraw()}>
+    
     <List size={32} />
-    </Link>
+    
       </li>
    
    </ul>
+
+
+   <div className='block lg:hidden'>
+    <h1 className='text-white   text-2xl'>LEMAMAR</h1>
+   </div>
 
     <ul className="hidden lg:flex  text-white uppercase justify-around items-center gap-9 ">
     <li>
@@ -78,7 +99,7 @@ function navBarDraw (){
 {console.log('test: ' + totalCartItems)}
 <div className='relative  text-purple-800 rounded-full font-bold hover:bg-purple-800 hover:text-white p-2 duration-500 cursor-pointer bg-white'>
 <Link to="/cart" >
-        <ShoppingCart size={32}  />
+        <ShoppingCart size={28}  />
  </Link>
  {totalCartItems>0 ?  <div className='bg-red-700 text-white rounded-full w-fit p-1 text-xs absolute top-0 right-0'  >
  {totalCartItems}
@@ -93,19 +114,21 @@ function navBarDraw (){
 
 
 {navBarDrawerStatus &&
-  <div className='block lg:hidden z-50 pt-0  fixed w-full'>
+   <motion.div
+   initial="hidden"
+    animate="visible"
+    variants={sidebarVariants}
+  className='block lg:hidden z-50 pt-0  fixed w-full'>
   <NavDrawer  setNavbarDrawerStatus={setNavbarDrawerStatus}/>
-</div>
+</motion.div>
 }
 
 
       {/* Logo holder*/}
-<div className='hidden md:block items-center pt-16'> 
-<img src={logo}  alt="Logo" className=" h-24 mx-auto" />
-</div>
+
 
       {/* very top contact bar */}
-      <div className= 'pt-14 md:pt-0 bg-purple-900 text-xs text-white space-x-4 flex p-3'>
+      <div className= ' pt-14 bg-purple-900 text-xs text-white space-x-4 flex p-3'>
         <p>Get Help</p>
           <p> Call 0719604053</p>
           <p> Messenger</p>
