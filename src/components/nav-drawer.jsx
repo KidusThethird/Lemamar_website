@@ -21,7 +21,7 @@ export const NavDrawer = (props) => {
     <div className='flex flex-col shadow-2xl text-white w-4/6 md:w-1/2 gap-y-4 py-4 pl-5 bg-purple-800 rounded-br-3xl'>
     
         <div className=' w-full flex '>
-          <div onClick={()=>closeNavbar()} className='justify-end ml-auto pr-5 '>
+          <div onClick={()=>closeNavbar()} className='justify-end ml-auto pr-5 cursor-pointer'>
             <X size={24} />
             </div>
         </div>
@@ -34,7 +34,7 @@ export const NavDrawer = (props) => {
             <h1 className='pl-12 italic'>Beauty Bar</h1>
             </div>
             <Link to="/">
-            <div className='flex gap-2 items-center' >      
+            <div className='flex gap-2 cursor-pointer items-center' >      
               <House size={20} />
              Home
              </div>
